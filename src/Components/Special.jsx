@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
 export const Special = () => {
     const [sknits, setKnits] = useState([]);
     useEffect(() => {
-      fetch("http://localhost:5000/s-knits")
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/s-knits`)
         .then((response) => response.json())
         .then((data) => {
           setKnits(data);
